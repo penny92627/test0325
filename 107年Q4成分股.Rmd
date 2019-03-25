@@ -1,0 +1,14 @@
+---
+title: "107年Q4成分股"
+author: "PennyLee"
+date: "2019年3月25日"
+output: html_document
+---
+
+```{r}
+options(repos="http://cran.rstudio.com")
+install.packages("readr")
+library(readr)
+tw50_2017<-read_csv("tw50.csv", locale  = locale(encoding = 'big5'))
+head(tw50_2017)
+```
