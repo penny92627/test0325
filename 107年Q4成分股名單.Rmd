@@ -1,0 +1,22 @@
+---
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+install.packages("quantmod")
+library(quantmod)
+tickers<-c("1101.TW, 1102.TW, 1216.TW, 1301.TW, 1303.TW, 1326.TW, 1402.TW, 2002.TW, 2105.TW, 2207.TW, 2301.TW, 2303.TW, 2308.TW, 2317.TW, 2327.TW, 2330.TW, 2357.TW, 2382.TW, 2395.TW, 2408.TW, 2409.TW, 2412.TW, 2454.TW, 2474.TW, 2633.TW, 2801.TW, 2823.TW, 2880.TW, 2881.TW, 2882.TW, 2883.TW, 2884.TW, 2885.TW, 2886.TW, 2887.TW, 2890.TW, 2891.TW, 2892.TW, 2912.TW, 3008.TW, 3045.TW, 3481.TW, 3711.TW, 4904.TW, 4938.TW, 5871.TW, 5876.TW, 5880.TW, 6505.TW, 9904.TW")
+getSymbols(tickers, from= '2016-01-01', auto.assign = T)
+tw1101<-Ad('1101.TW')
+etf4<-read.csv("C:/Users/Penny/Desktop/股票.csv")
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
